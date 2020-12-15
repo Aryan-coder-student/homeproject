@@ -11,27 +11,29 @@ while ask !="yes" and ask!="no" :
     ask =input("Plz enter| Do you want to update the list(yes/no) :- ")
     break
 if ask=="yes":
-    ask1=input("want to remove item and add new item(y/n) :- ")
-    while  ask1=="y" or ask1=="n" :
-        if ask1=="y":
-            ak=int(input("write the item you want to remove :-"))
+    ask1=input("want to remove item and add new item(yes/no) :- ")
+    while ask1 !="yes" and ask1!="no" :
+        ask1=input("want to remove item and add new item(yes/no) :- ")
+    if ask1=="yes":
+        ak=int(input("write the item you want to remove :-"))
+        a.remove(ak)
+        print(a)
+        ak2=int(input("Write the element you want to add :-"))
+        a.append(ak2)
+        a.sort()
+        print("Your final list is sorted : ",a)
+    elif ask1=="no":
+        ak21=input("Do you want to only delete an item ,then write(y) or only add write(n) (y/n) :- ")
+        while ask21 !="yes" and ask21!="no" :
+           ak21=input("Do you want to only delete an item ,then write(y) or only add write(n) (y/n) :- ")
+           break
+        if ak21=="y":
+            ak22 = int(input("write the item you want to remove :-"))
             a.remove(ak)
-            print(a)
-            ak2=int(input("Write the element you want to add :-"))
-            a.append(ak2)
-            a.sort()
-            print("Your final list is sorted : ",a)
-        elif ask1=="n":
-            ak21=input("Do you want to only delete an item ,then write(y) or only add write(n) (y/n) :- ")
-            while ask1 !="y" or ask1 !="n":
-                    ak21=input("Do you want to only delete an item ,then write(y) or only add write(n) (y/n) :- ")
-                    if ak21=="y":
-                        ak22 = int(input("write the item you want to remove :-"))
-                        a.remove(ak)
-                        print(a,"-->final list")
-                    elif  ak21=="n":
-                        ak223=int(input("write the element you want to add :- "))
-                        a.append(ak223)
+            print(a,"-->final list")
+        elif  ak21=="n":
+            ak223=int(input("write the element you want to add :- "))
+            a.append(ak223)
 elif ask=="no":
     ak3=input("Want to add another list to the list(y/n) :- ")
     if ak3=="y":
@@ -40,13 +42,7 @@ elif ask=="no":
             ak3 = int(input("Enter item :-" ))
             an.append(ak3)
             jl=an+a
-        print(jl)
+        print(jl.sort())
     elif ak3=="n":
         print("Thanks for using programme")
         print(a.sort(),"--->Your sorted list")
-
-
-
-
-
-

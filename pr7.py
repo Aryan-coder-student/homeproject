@@ -9,11 +9,11 @@ for i in range(0,x):
     cn.append(c)
     cac.append(ca)
     cuc.append(cu)
-print("Country"," "," || ","Capital"," ","  ||  ","Currency")
+print("Country","|","Capital","|","Currency")
 print("------------------------------------------------")
 for n in range(0,x):
     print(cn[n],"||",cac[n],"||",cuc[n])
-    print("----+----+----+-")
+    print("----+----+----+-----+-----+----")
 s = input("Enter the country you want to search : ")
 for sx in range(0,x):
     sl=cn[sx]

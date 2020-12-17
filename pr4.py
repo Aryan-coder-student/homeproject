@@ -18,7 +18,7 @@ for b in range(0,x):
         if c not in  (choose[0] ,choose[1] , choose[2]):
             print("Enter valid a choice or get lost")
             c= input("Enter your choice [stone,paper,scissors] :- ")
-            e =[random.choice(choose)]
+            e =random.choice(choose)
             f.append(e)
             fl=[f[n],d[n]]
         else:
